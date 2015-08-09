@@ -50,7 +50,7 @@ def roman_form(request):
              # Reverse the resulting list and convert it
              # into a string for display on the page
              roman_number_str = ''.join((list(reversed(roman_number_list))))
-             return  render_to_response('roman_form.html', {'roman_number': roman_number_str }, RequestContext(request))
+             return  render_to_response('roman_form.html', {'roman_number': roman_number_str, 'flag': 2 }, RequestContext(request))
     else:
          form = RomanForm()
-    return render_to_response('roman_form.html', {'form': form }, RequestContext(request))
+    return render_to_response('roman_form.html', {'form': form, 'flag': 1 }, RequestContext(request))
